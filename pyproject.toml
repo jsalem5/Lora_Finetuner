@@ -1,0 +1,21 @@
+[project]
+name = "lora-finetune"
+version = "0.1.0"
+description = "LoRA fine-tuning CLI tool"
+authors = [
+    { name = "Jonathan Salem", email = "jonathansalem5@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "unsloth @ git+https://github.com/unslothai/unsloth.git@7758e1da968b005ab0e5ec12889b88de1a0d1e03",
+    "torch>=2.7.1",
+    "transformers>=4.53.2",
+    "trl>=0.19.1",
+    "datasets>=3.6.0",
+    "bitsandbytes>=0.47.0",
+    "unsloth_zoo>-2025.8.3"
+]
+
+[project.scripts]
+lora-cli = "lora_finetune.cli:entry"
